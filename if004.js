@@ -1,24 +1,15 @@
 //Maior de dois números
-const readline = require("readline")
+let readline = require("readline-sync")
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-})
+n1 = readline.question("Digite o primeiro numero: ")
+n2 = readline.question("Digite o segundo numero: ")
 
-rl.question("Digite o primeiro número: ", function(resposta1) {
-  rl.question("Digite o segundo número: ", function(resposta2) {
-    const num1 = parseFloat(resposta1)
-    const num2 = parseFloat(resposta2)
-
-    if (num1 > num2) {
-      console.log("O primeiro número é maior.");
-    } else if (num2 > num1) {
-      console.log("O segundo número é maior.");
-    } else {
-      console.log("Os dois números são iguais.");
-    }
-
-    rl.close()
-  })
-})
+if(n1 == n2){
+  console.log("Os numeros são iguais!")
+}
+else if(n1 > n2){
+  console.log("O primeiro numero é maior!")
+}
+else{
+  console.log("O segundo numero é maior!")
+}

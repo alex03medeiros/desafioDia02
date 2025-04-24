@@ -1,20 +1,12 @@
 //Pode votar ou não
-const readline = require("readline")
 
-const r1 = readline.createInterface({
-    input:process.stdin,
-    output:process.stdout
+let readline = require('readline-sync')
 
-})
+idade = readline.question("Qual é a idade do cidadão? ")
 
-r1.question("Digite sua idade: ", function(resposta){
-    let idade = parseInt(resposta)
-
-if (idade >= 16){
-    console.log("Você pode votar!")
+if(idade >= 16){
+    console.log("O cidadão pode votar!")
 }
 else{
-    console.log("Você ainda não pode votar!")
+    console.log("O cidadão NÃO pode votar!")
 }
-r1.close()
-})

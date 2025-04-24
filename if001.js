@@ -1,20 +1,14 @@
-const readline = require("readline")
+//Positivo ou Negativo
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+let readline = require('readline-sync')
+numero = readline.question("Digite um numero: ")
 
-rl.question("Digite um número: ", (input) => {
-  const numero = parseInt(input);
-
-  if (numero > 0) {
-    console.log("O número é positivo.")
-  } else if (numero < 0) {
-    console.log("O número é negativo.")
-  } else {
-    console.log("O número é zero.")
-  }
-
-  rl.close()
-});
+if(numero == 0){
+  console.log("O número é zero!")
+}
+else if(numero > 0){
+  console.log("O número "+numero+" é positivo!")
+}
+else{
+  console.log("O número "+numero+" é negativo!")
+}
